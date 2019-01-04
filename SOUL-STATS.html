@@ -12314,7 +12314,7 @@ div#notebook {
 
     <div class="bk-root">
         <a href="https://bokeh.pydata.org" target="_blank" class="bk-logo bk-logo-small bk-logo-notebook"></a>
-        <span id="1002">Loading BokehJS ...</span>
+        <span id="1001">Loading BokehJS ...</span>
     </div>
 </div>
 
@@ -12327,10 +12327,10 @@ div#notebook {
 
 
 
-<div id="4fa2556e-3ec7-4eb8-b1c2-5dd5b8a2de95"></div>
+<div id="227cbe2c-6143-4715-9849-7b55d1dab2fe"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#4fa2556e-3ec7-4eb8-b1c2-5dd5b8a2de95');
+var element = $('#227cbe2c-6143-4715-9849-7b55d1dab2fe');
 
 (function(root) {
   function now() {
@@ -12490,7 +12490,7 @@ var element = $('#4fa2556e-3ec7-4eb8-b1c2-5dd5b8a2de95');
      "</div>"}};
 
   function display_loaded() {
-    var el = document.getElementById("1002");
+    var el = document.getElementById("1001");
     if (el != null) {
       el.textContent = "BokehJS is loading...";
     }
@@ -12544,9 +12544,9 @@ var element = $('#4fa2556e-3ec7-4eb8-b1c2-5dd5b8a2de95');
       console.log("Bokeh: injecting script tag for BokehJS library: ", url);
       document.getElementsByTagName("head")[0].appendChild(s);
     }
-  };var element = document.getElementById("1002");
+  };var element = document.getElementById("1001");
   if (element == null) {
-    console.log("Bokeh: ERROR: autoload.js configured with elementid '1002' but no matching script tag was found. ")
+    console.log("Bokeh: ERROR: autoload.js configured with elementid '1001' but no matching script tag was found. ")
     return false;
   }
 
@@ -12583,7 +12583,7 @@ var element = $('#4fa2556e-3ec7-4eb8-b1c2-5dd5b8a2de95');
       console.log("Bokeh: BokehJS failed to load within specified timeout.");
       root._bokeh_failed_load = true;
     } else if (force !== true) {
-      var cell = $(document.getElementById("1002")).parents('.cell').data().cell;
+      var cell = $(document.getElementById("1001")).parents('.cell').data().cell;
       cell.output_area.append_execute_result(NB_LOAD_WARNING)
     }
 
@@ -12616,34 +12616,6 @@ var element = $('#4fa2556e-3ec7-4eb8-b1c2-5dd5b8a2de95');
     </button>
   </div>
 
-</div>
-
-<div class="output_area">
-
-    
-
-
-
-  <div class="output_subarea output_widget_view ">
-    <button class="js-nbinteract-widget">
-      Loading widgets...
-    </button>
-  </div>
-
-</div>
-
-<div class="output_area">
-
-    
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>new value: d
-Connecting to database...
-Wrong Password d
-new value: dbreader
-Connecting to database...
-</pre>
-</div>
 </div>
 
 <div class="output_area">
