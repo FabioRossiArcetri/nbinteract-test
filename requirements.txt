@@ -84,7 +84,6 @@ PyYAML==3.12
 pyzmq==17.0.0
 requests==2.20.0
 requests-file==1.4.3
-rpm==4.14.2.1
 scikit-image==0.13.0
 scikit-learn==0.19.1
 scipy==1.0.0
