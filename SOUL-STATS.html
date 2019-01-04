@@ -11826,6 +11826,48 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbi:hide_in</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span>
+
+<span class="n">password_widget</span> <span class="o">=</span> <span class="n">ipywidgets</span><span class="o">.</span><span class="n">Password</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Password:&#39;</span><span class="p">,</span> <span class="n">placeholder</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">password_widget</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="nbinteract-hide_in
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbi:hide_in</span>
 
 <span class="o">%</span><span class="k">reload_ext</span> autoreload
 
@@ -11858,10 +11900,8 @@ div#notebook {
 
 <span class="c1"># hide_code()</span>
 
-<span class="kn">from</span> <span class="nn">getpass</span> <span class="k">import</span> <span class="n">getpass</span>  
-<span class="n">input_passwd</span> <span class="o">=</span> <span class="n">getpass</span><span class="p">(</span><span class="n">prompt</span><span class="o">=</span><span class="s1">&#39;Enter your password to  database: &#39;</span><span class="p">)</span>
-
-<span class="kn">import</span> <span class="nn">ipywidgets</span>
+<span class="c1">#from getpass import getpass  </span>
+<span class="c1">#input_passwd = getpass(prompt=&#39;Enter your password to  database: &#39;)</span>
 
 <span class="c1"># print(&#39;iPyWidgets version: &#39;+ipywidgets.__version__)</span>
 
@@ -12238,6 +12278,7 @@ div#notebook {
     <span class="k">def</span> <span class="nf">connectToDB</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db_name</span><span class="p">):</span>
         <span class="c1"># init status variables</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">clear_status</span><span class="p">()</span>
+        <span class="n">input_passwd</span> <span class="o">=</span> <span class="n">password_widget</span><span class="o">.</span><span class="n">value</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">myDB</span> <span class="o">=</span> <span class="n">DatabaseObj</span><span class="p">(</span><span class="s1">&#39;192.168.39.57&#39;</span><span class="p">,</span> <span class="n">db_name</span><span class="p">,</span> <span class="n">input_passwd</span><span class="p">,</span> <span class="n">input_passwd</span><span class="p">)</span> 
         <span class="bp">self</span><span class="o">.</span><span class="n">myDB</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">myDB</span><span class="o">.</span><span class="n">loadTablesNamesAndStructure</span><span class="p">()</span>
@@ -12265,6 +12306,27 @@ div#notebook {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
 </div>
 </div>
 
