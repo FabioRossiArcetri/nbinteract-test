@@ -11819,22 +11819,16 @@ div#notebook {
 
   
 
-  <div class="nbinteract-hide_in
+  <div class="
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">reload_ext</span> autoreload
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># %reload_ext autoreload</span>
 
 <span class="kn">import</span> <span class="nn">time</span>
-
-<span class="c1"># nbi:hide_in</span>
 <span class="kn">import</span> <span class="nn">ipywidgets</span>
-<span class="c1">#password_widget = ipywidgets.Password(description=&#39;Password:&#39;, placeholder=&#39;&#39;)</span>
-<span class="c1">#password_widget</span>
-<span class="c1">#time.sleep(1)</span>
-
 
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
@@ -11864,8 +11858,7 @@ div#notebook {
 
 <span class="c1"># hide_code()</span>
 
-<span class="c1">#from getpass import getpass  </span>
-<span class="c1">#input_passwd = getpass(prompt=&#39;Enter your password to  database: &#39;)</span>
+<span class="kn">from</span> <span class="nn">getpass</span> <span class="k">import</span> <span class="n">getpass</span>
 
 <span class="c1"># print(&#39;iPyWidgets version: &#39;+ipywidgets.__version__)</span>
 
@@ -12229,8 +12222,6 @@ div#notebook {
        
     <span class="k">def</span> <span class="nf">display_gui</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">display</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">global_cont</span><span class="p">)</span>
-
-<span class="kn">import</span> <span class="nn">getpass</span>
                 
 <span class="k">class</span> <span class="nc">GlobalObj</span><span class="p">():</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -12238,6 +12229,9 @@ div#notebook {
         <span class="bp">self</span><span class="o">.</span><span class="n">saveToAscii</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">max_records_per_query</span> <span class="o">=</span> <span class="mi">100000</span>
         <span class="c1"># DB initizialization</span>
+<span class="c1">#        self.password_widget = ipywidgets.Password(description=&#39;Password:&#39;, placeholder=&#39;&#39;)</span>
+<span class="c1">#        display(self.password_widget)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">connectToDB</span><span class="p">(</span><span class="s1">&#39;WFS_SOUL_SX&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">initGui</span><span class="p">()</span>
     
@@ -12246,15 +12240,17 @@ div#notebook {
         <span class="bp">self</span><span class="o">.</span><span class="n">clear_status</span><span class="p">()</span>
         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
             <span class="k">try</span><span class="p">:</span>
-                <span class="c1"># input_passwd = password_widget.value</span>
-                <span class="n">input_passwd</span> <span class="o">=</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getpass</span><span class="p">()</span>
+<span class="c1">#                input_passwd = self.password_widget.value</span>
+                <span class="c1">#input_passwd = getpass.getpass()</span>
+                <span class="n">input_passwd</span> <span class="o">=</span> <span class="n">getpass</span><span class="p">(</span><span class="n">prompt</span><span class="o">=</span><span class="s1">&#39;Enter your password to  database: &#39;</span><span class="p">)</span>
+
                 <span class="bp">self</span><span class="o">.</span><span class="n">myDB</span> <span class="o">=</span> <span class="n">DatabaseObj</span><span class="p">(</span><span class="s1">&#39;192.168.39.57&#39;</span><span class="p">,</span> <span class="n">db_name</span><span class="p">,</span> <span class="n">input_passwd</span><span class="p">,</span> <span class="n">input_passwd</span><span class="p">)</span> 
                 <span class="bp">self</span><span class="o">.</span><span class="n">myDB</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">myDB</span><span class="o">.</span><span class="n">loadTablesNamesAndStructure</span><span class="p">()</span>
                 <span class="k">break</span>
             <span class="k">except</span><span class="p">:</span>
                 <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wrong Password&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wrong Password&quot;</span><span class="p">,</span> <span class="n">input_passwd</span> <span class="p">)</span>
             
         <span class="n">clear_output</span><span class="p">()</span>
        
@@ -12280,27 +12276,6 @@ div#notebook {
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    
-
-
-
-  <div class="output_subarea output_widget_view ">
-    <button class="js-nbinteract-widget">
-      Loading widgets...
-    </button>
-  </div>
-
-</div>
-
 </div>
 </div>
 
