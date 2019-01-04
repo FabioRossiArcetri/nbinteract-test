@@ -89,8 +89,6 @@ scikit-learn==0.19.1
 scipy==1.0.0
 Send2Trash==1.4.2
 simplegeneric==0.8.1
-six==1.11.0
-slip.dbus==0.6.4
 smartcols==0.3.0
 sos==3.6
 SQLAlchemy==1.2.15
