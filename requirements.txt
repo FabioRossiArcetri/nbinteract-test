@@ -27,7 +27,7 @@ jupyterhub==0.9.4
 MarkupSafe==0.23
 matplotlib==2.2.3
 mpmath==1.0.0
-nbconvert==5.3.1
+nbconvert==6.3.0
 nbformat==4.4.0
 nbinteract==0.2.4
 netifaces==0.10.6
